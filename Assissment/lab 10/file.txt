@@ -1,0 +1,53 @@
+ #include <stdio.h>
+ #include <pthread.h>
+
+// Function to print the table of a given number
+ vold *printTable(void *num)
+ int n *((int*)num);
+ printf("In First Thread printing the Table of %d\n", n);
+ for (int i=1; i <= 10; ++) {
+ printf("%d x xd = %d\n",n,t, n* 1 1);
+ }
+ pthread_exit(NULL);
+
+
+// Function to print the name 15 vold printName(void *name) {
+ char *nyName = (char *)name;
+ printf("In Second Thread Printing the name\n");
+ printf("Printing the Name: %s\n", myNane);
+ pthread_exit(NULL);
+)
+
+int main() {
+ pthread_t T1, T2; 
+ int tableNun = 5; 
+
+char nyName[] = "NASIR":
+
+
+// Create thread 12 to print the name if (pthread_create(&T2, NULL, printName, (void *)nyNane) != 0) { perror("Thread creation falled");
+
+
+
+return 1;
+}
+
+
+// Wait for 12 to finish before creating Ti
+
+pthread_join(T2, NULL);
+
+
+// Create thread Ti to print the table
+
+if (pthread_create(&T1, NULL, printTable, (void *)&tableNun) != 0) { perror("Thread creation falled");
+return 1;
+}
+
+
+
+// Wait for T1 to finish pthread join(T1, NULL);
+
+ printf("Exiting the main function\n");
+return 0;
+}
